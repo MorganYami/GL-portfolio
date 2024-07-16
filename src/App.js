@@ -1,12 +1,12 @@
 
 // import './App.css';
-import Apropos from './components/apropos/apropos';
-import Chrono from './components/chronologie/chronologie';
-import Competences from './components/competences/competences';
-import Footer from './components/footer/footer';
-import Hello from './components/hello/hello';
-import Navbar from './components/navbar/navbar';
-import Projets from './components/projets/projets';
+import Apropos from './components/apropos';
+import Chrono from './components/chronologie';
+import Competences from './components/competences';
+import Footer from './components/footer';
+import Hello from './components/hello';
+import Navbar from './components/navbar';
+import Projets from './components/projets';
 
 function App() {
   return (
