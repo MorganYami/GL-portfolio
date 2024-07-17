@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { backgroundStandard, flexCenter } from "../../utils/style/variables"
+import { backgroundStandard, contourShadow, flexCenter } from "../../utils/style/variables"
 import colors from "../../utils/style/colors"
 // import formationList from "../../data/formation.json"
 
@@ -11,11 +11,10 @@ const FormationCard = styled.div`
     background-color: ${colors.primary};
     width: 500px;
     height: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-align: center;
     align-content: center;
-    border-radius: 5px;
-
+    ${contourShadow}
 `
 
 function Chrono(){

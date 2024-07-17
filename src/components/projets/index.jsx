@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { backgroundStandard, flexCenter } from "../../utils/style/variables"
+import { backgroundStandard, contourShadow, flexCenter } from "../../utils/style/variables"
 
 import tempProjectImg from "../../assets/background/pexels-pixabay-247791.jpg"
 
@@ -22,6 +22,7 @@ const Project = styled.div`
     color: white;
     text-align: center;
     align-content: center;
+    ${contourShadow}
 `
 
 function Projets() {
