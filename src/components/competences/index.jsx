@@ -2,19 +2,20 @@ import styled from "styled-components"
 import { backgroundStandard, contourShadow, flexCenter } from "../../utils/style/variables"
 import colors from "../../utils/style/colors"
 
-import logoHtml from "../../assets/logos/logoHTML.png"
-import logoCss from "../../assets/logos/logoCSS.png"
-import logoScss from "../../assets/logos/logoSASS.png"
-import logoJS from "../../assets/logos/logoJS.png"
-import logoReact from "../../assets/logos/logoREACT.png"
-import logoRedux from "../../assets/logos/logoREDUX.png"
-import logoGit from "../../assets/logos/logoGit.png"
-import logoVS from "../../assets/logos/logoVScode.png"
-import logoPost from "../../assets/logos/logoPostman.png"
-import logoNode from "../../assets/logos/logoNodeJS.png"
-import logoPhp from "../../assets/logos/logoPHP.png"
-import logoSQL from "../../assets/logos/logoMySQL.png"
-import logoSEO from "../../assets/logos/logoSEO.png"
+import logoHtml from "../../assets/logos/logoHTML.webp"
+import logoCss from "../../assets/logos/logoCSS.webp"
+import logoScss from "../../assets/logos/logoSASS.webp"
+import logoJS from "../../assets/logos/logoJS.webp"
+import logoReact from "../../assets/logos/logoREACT.webp"
+import logoRedux from "../../assets/logos/logoREDUX.webp"
+import logoGit from "../../assets/logos/logoGit.webp"
+import logoVS from "../../assets/logos/logoVScode.webp"
+import logoPost from "../../assets/logos/logoPostman.webp"
+import logoNode from "../../assets/logos/logoNodeJS.webp"
+import logoPhp from "../../assets/logos/logoPHP.webp"
+import logoSQL from "../../assets/logos/logoMySQL.webp"
+import logoSEO from "../../assets/logos/logoSEO.webp"
+import { size } from "../../utils/style/device"
 
 
 const Comp = styled.div`
@@ -22,24 +23,33 @@ const Comp = styled.div`
     ${backgroundStandard}
 `
 const CompBox = styled.div`
-    width:80%;
+    width:90%;
     ${flexCenter}
 `
-const CompRow = styled.div`
+const CompRow = styled.div`    
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    @media screen and (max-width: ${size.tablet}) {
+    
+    }
 `
 const CompList = styled.div`
     height: 50px;
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin: 20px 10px;
     background-color: ${colors.tertiary};
     padding: 5px 10px;
     ${contourShadow}
+    align-items: center;
+    justify-content: center;
+    img {
+        height: 40px;
+    }
 `
 
 function Competences() {

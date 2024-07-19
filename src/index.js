@@ -7,9 +7,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const GlobalStyle = createGlobalStyle`
-  body {
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-  } 
+  
 `
 
 

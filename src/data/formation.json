@@ -1,28 +1,26 @@
-{
-    "formations": [
-        {
-            "id": 0,
-            "date": "2012",
-            "description": "Baccalauréat Science",
-            "where": "Privas"
-        },
-        {
-            "id": 1,
-            "date" : "2018",
-            "description": "Formation développeur web",
-            "where": "Simplon Pau"
-        },
-        {
-            "id": 2,
-            "date" : "2023 - 2024",
-            "description" :"Formation Intégrateur Web",
-            "where": "OpenClassrooms"
-        },
-        {
-           "id": 3,
-             "date" : "2024",
-            "description" :"Titre professionel « Développeur Intégrateur Web »",
-            "where": "OpenClassrooms"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "date": "2012",
+        "description": "Baccalauréat Science",
+        "where": "Privas"
+    },
+    {
+        "id": 2,
+        "date": "2018",
+        "description": "Formation développeur web",
+        "where": "Simplon Pau"
+    },
+    {
+        "id": 3,
+        "date": "2023-2024",
+        "description": "Formation Intégrateur Web",
+        "where": "OpenClassrooms"
+    },
+    {
+        "id": 4,
+        "date": "2024",
+        "description": "Titre professionel « Développeur Intégrateur Web »",
+        "where": "OpenClassrooms"
+    }
+]

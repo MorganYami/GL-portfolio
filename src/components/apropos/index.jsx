@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { backgroundStandard, flexCenter } from "../../utils/style/variables"
+import { size } from "../../utils/style/device"
 
 
 const ProposBox = styled.div`   
@@ -8,7 +9,13 @@ const ProposBox = styled.div`
 `
 const DescPerso = styled.p`
     width: 60%;
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    @media screen and (max-width: ${size.mobileL}) {
+        width: 80%;
+    }
+    @media screen and (max-width: ${size.mobileM}) {
+        font-size:0.8em;
+    }
 `
 
 function Apropos() {

@@ -1,6 +1,9 @@
 import styled from 'styled-components';
-import Logo from '../../assets/logos/logoPortfolio_small.png';
+import Logo from '../../assets/logos/logoPortfolio_small.webp';
 import colors from '../../utils/style/colors';
+import { size } from '../../utils/style/device';
+import { flexCenter } from '../../utils/style/variables';
+import navButton from '../../assets/icons/navButton.svg'
 
 const StyledHeader = styled.header`
     position: fixed;
@@ -10,7 +13,7 @@ const StyledHeader = styled.header`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: ${colors.backgroundDark}
+    background-color: ${colors.backgroundDarker};
 `
 const LogoImg = styled.img`
     width: 50px;
@@ -20,7 +23,25 @@ const LogoImg = styled.img`
     padding: 2px;
     margin-left: 10px;
 `
-const NavLinks = styled.a`
+const NavLarge = styled.nav`    
+    display: flex;    
+    @media screen and (max-width: ${size.tablet}) {
+        display: none;
+    }
+`
+const NavSmall = styled.nav`
+    display: none;    
+    @media screen and (max-width: ${size.tablet}) {
+        ${flexCenter}
+    }   
+`
+const ButtonNav = styled.img`
+    margin-right: 20px;
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+`
+const NavLink = styled.a`
     margin-right: 20px;
     color: white;
     font-weight: bold;
@@ -30,19 +51,46 @@ const NavLinks = styled.a`
         text-decoration: underline;
     }
 `
+const NSBox = styled.div`
+    // display:none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 75px;
+    padding: 10px 20px;
+    background-color: ${colors.backgroundDark};
+    border-bottom-right-radius: 10px;
+`
+const NavLinkS = styled.a`
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+`
 
 function Navbar() {
     return (
         <StyledHeader>
             <LogoImg id="logo" src={Logo} alt="" />
-            <nav id="navLinkLarge">
-                <NavLinks href="#Accueil">Accueil</NavLinks>
-                <NavLinks href="#APropos">À Propos</NavLinks>
-                <NavLinks href="#Competences">Compétences</NavLinks>
-                <NavLinks href="#Formations">Formations</NavLinks>
-                <NavLinks href="#Portfolio">Portfolio</NavLinks>
-                <NavLinks href="#Contact">Contact</NavLinks>
-            </nav>
+            <NavLarge>
+                <NavLink href="#Accueil">Accueil</NavLink>
+                <NavLink href="#APropos">À Propos</NavLink>
+                <NavLink href="#Competences">Compétences</NavLink>
+                <NavLink href="#Formations">Formations</NavLink>
+                <NavLink href="#Portfolio">Portfolio</NavLink>
+                <NavLink href="#Contact">Contact</NavLink>
+            </NavLarge>
+            <NavSmall>
+                <ButtonNav src={navButton} alt="" onClick="" />
+            </NavSmall>
+            <NSBox id="navLinks">
+                <NavLinkS href="#Accueil">Accueil</NavLinkS>
+                <NavLinkS href="#APropos">À Propos</NavLinkS>
+                <NavLinkS href="#Competences">Compétences</NavLinkS>
+                <NavLinkS href="#Formations">Formations</NavLinkS>
+                <NavLinkS href="#Portfolio">Portfolio</NavLinkS>
+                <NavLinkS href="#Contact">Contact</NavLinkS>
+            </NSBox>
         </StyledHeader>
     )
 }

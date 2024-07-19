@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { backgroundStandard, contourShadow, flexCenter } from "../../utils/style/variables"
 
 import tempProjectImg from "../../assets/background/pexels-pixabay-247791.jpg"
+import { size } from "../../utils/style/device"
 
 const PortfolioBox = styled.div`
     ${flexCenter}
@@ -13,6 +14,11 @@ const ProjectBox = styled.div`
     width: 90%;
     margin: 20px 0px;
     justify-content: space-evenly;
+    @media screen and (max-width: ${size.tablet}) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 `
 const Project = styled.div`    
     background: no-repeat center url(${tempProjectImg});
@@ -23,6 +29,10 @@ const Project = styled.div`
     text-align: center;
     align-content: center;
     ${contourShadow}
+    @media screen and (max-width: ${size.tablet}) {
+        width: 90%;
+        margin-top: 25px
+    }
 `
 
 function Projets() {
