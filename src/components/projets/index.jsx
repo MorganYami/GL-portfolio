@@ -1,12 +1,17 @@
 import styled from "styled-components"
 import { backgroundStandard, contourShadow, flexCenter } from "../../utils/style/variables"
-
-import tempProjectImg from "../../assets/background/pexels-pixabay-247791.jpg"
+// import ProjetKasa from "../../assets/background/Kasa_Screen.png"
+// import ProjetBank from "../../assets/background/ArgnetBank_Screen.png"
+// import tempProjectImg from "../../assets/background/pexels-pixabay-247791.jpg"
 import { size } from "../../utils/style/device"
+import colors from "../../utils/style/colors"
 
 const PortfolioBox = styled.div`
     ${flexCenter}
     ${backgroundStandard}
+    @media screen and (min-width: ${size.desktopMax}) {
+        width: 80%;
+    } 
 `
 const ProjectBox = styled.div`
     display: flex;
@@ -20,31 +25,31 @@ const ProjectBox = styled.div`
         justify-content: center;
     }
 `
-const Project = styled.div`    
-    background: no-repeat center url(${tempProjectImg});
-    background-size: cover;
+const Project = styled.div`  
     width: 400px;
     height: 200px;
     color: white;
     text-align: center;
     align-content: center;
-    ${contourShadow}
+    ${contourShadow}    
+    border-color: ${colors.backgroundDarker};
     @media screen and (max-width: ${size.tablet}) {
         width: 90%;
-        margin-top: 25px
+        margin: 25px 0px 50px 0px;
     }
 `
 
 function Projets() {
+    const openProject = (url) => {
+        window.open(url, "_blank", "noreferrer");
+      };
     return (
         <PortfolioBox id="Portfolio">
             <h2>Quelques Réalisations</h2>
             <ProjectBox>
-                <Project className="projet">
-                    <h3>Projet 1</h3>
+                <Project id="kasa" onClick={() => openProject("https://plainenglish.io")}>
                 </Project>
-                <Project className="projet">
-                    <h3>Projet 2</h3>
+                <Project id="bank" onClick={() => openProject("https://plainenglish.io")}>
                 </Project>
             </ProjectBox>
         </PortfolioBox>

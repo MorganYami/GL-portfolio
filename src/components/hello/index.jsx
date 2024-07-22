@@ -22,6 +22,9 @@ const AccueilBox = styled.div`
             font-size: 0.7em;
         }
     }
+    @media screen and (min-width: ${size.desktopMax}) {
+        width: 80%;
+    } 
     
     
 `

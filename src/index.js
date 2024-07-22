@@ -7,7 +7,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const GlobalStyle = createGlobalStyle`
-  
+       
 `
 
 

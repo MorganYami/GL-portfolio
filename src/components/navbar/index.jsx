@@ -5,6 +5,7 @@ import { size } from '../../utils/style/device';
 import { flexCenter } from '../../utils/style/variables';
 import navButton from '../../assets/icons/navButton.svg'
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const StyledHeader = styled.header`
     position: fixed;
@@ -15,6 +16,7 @@ const StyledHeader = styled.header`
     align-items: center;
     justify-content: space-between;
     background-color: ${colors.backgroundDarker};
+    z-index: 10;
 `
 const LogoImg = styled.img`
     width: 50px;
@@ -23,12 +25,18 @@ const LogoImg = styled.img`
     border-radius: 25px;
     padding: 2px;
     margin-left: 10px;
+    @media screen and (min-width: ${size.desktopMax}) {
+        margin-left: 100px;
+    } 
 `
 const NavLarge = styled.nav`    
     display: flex;    
     @media screen and (max-width: ${size.tablet}) {
         display: none;
     }
+    @media screen and (min-width: ${size.desktopMax}) {
+        margin-right: 100px;
+    } 
 `
 const NavSmall = styled.nav`
     display: none;    
@@ -59,7 +67,7 @@ const NSBox = styled.div`
         flex-direction: column;
         position: fixed;
         top: 75px;
-        right: 0px;
+        right: -100px;
         padding: 10px 20px;
         background-color: ${colors.backgroundDark};
         border-bottom-left-radius: 10px;
@@ -109,7 +117,7 @@ function Navbar() {
                 <NavSmall>
                     <ButtonNav src={navButton} alt="" onClick={(e) => changeDisplayNavBar(!displayNavBar)} />
                 </NavSmall>
-                <NSBox id="navLinks">
+                <NSBox id="navLinks" as={motion.div} animate={{ x: -90 }}>
                     <NavLinkS href="#Accueil">Accueil</NavLinkS>
                     <NavLinkS href="#APropos">À Propos</NavLinkS>
                     <NavLinkS href="#Competences">Compétences</NavLinkS>

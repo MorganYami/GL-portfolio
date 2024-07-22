@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { backgroundStandard, contourShadow, flexCenter } from "../../utils/style/variables"
 import colors from "../../utils/style/colors"
+import { motion } from "framer-motion"
 
 import logoHtml from "../../assets/logos/logoHTML.webp"
 import logoCss from "../../assets/logos/logoCSS.webp"
@@ -21,6 +22,9 @@ import { size } from "../../utils/style/device"
 const Comp = styled.div`
     ${flexCenter}
     ${backgroundStandard}
+    @media screen and (min-width: ${size.desktopMax}) {
+        width: 80%;
+    } 
 `
 const CompBox = styled.div`
     width:90%;
@@ -45,10 +49,14 @@ const CompList = styled.div`
     background-color: ${colors.tertiary};
     padding: 5px 10px;
     ${contourShadow}
+    border-color: white;
     align-items: center;
     justify-content: center;
     img {
         height: 40px;
+    }
+    p {
+        margin-left: 15px
     }
 `
 
@@ -59,63 +67,63 @@ function Competences() {
             <CompBox>
                 <h3>Maitrisées:</h3>
                 <CompRow>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
                         <img src={logoHtml} alt="" />
-                        <p>&emsp; HTML</p>
+                        <p> HTML</p>
                     </CompList>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
                         <img src={logoCss} alt="" />
-                        <p>&emsp; CSS</p>
+                        <p> CSS</p>
                     </CompList>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
                         <img src={logoScss} alt="" />
-                        <p>&emsp; SCSS</p>
+                        <p> SCSS</p>
                     </CompList>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
                         <img src={logoJS} alt="" />
-                        <p>&emsp; Javascript</p>
+                        <p> Javascript</p>
                     </CompList>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
                         <img src={logoReact} alt="" />
-                        <p>&emsp; React</p>
+                        <p> React</p>
                     </CompList>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
                         <img src={logoRedux} alt="" />
-                        <p>&emsp;Redux</p>
+                        <p>Redux</p>
                     </CompList>
                 </CompRow>
                 <h3>Outils:</h3>
                 <CompRow>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1}}>
                         <img src={logoGit} alt="" />
-                        <p>&emsp;Git</p>
+                        <p>Git</p>
                     </CompList>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1}}>
                         <img src={logoVS} alt="" />
-                        <p>&emsp;VScode</p>
+                        <p>VScode</p>
                     </CompList>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1}}>
                         <img src={logoPost} alt="" />
-                        <p>&emsp;Postman</p>
+                        <p>Postman</p>
                     </CompList>
                 </CompRow>
                 <h3>Notions:</h3>
                 <CompRow>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
                         <img src={logoNode} alt="" />
-                        <p>&emsp;NodeJS</p>
+                        <p>NodeJS</p>
                     </CompList>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
                         <img src={logoPhp} alt="" />
-                        <p>&emsp;Php</p>
+                        <p>Php</p>
                     </CompList>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
                         <img src={logoSQL} alt="" />
-                        <p>&emsp;MySQL</p>
+                        <p>MySQL</p>
                     </CompList>
-                    <CompList>
+                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
                         <img src={logoSEO} alt="" />
-                        <p>&emsp;SEO</p>
+                        <p>SEO</p>
                     </CompList>
                 </CompRow>
             </CompBox>

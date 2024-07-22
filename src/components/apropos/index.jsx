@@ -3,9 +3,12 @@ import { backgroundStandard, flexCenter } from "../../utils/style/variables"
 import { size } from "../../utils/style/device"
 
 
-const ProposBox = styled.div`   
+const ProposBox = styled.div`  
     ${flexCenter}
     ${backgroundStandard}
+    @media screen and (min-width: ${size.desktopMax}) {
+        width: 80%;
+    } 
 `
 const DescPerso = styled.p`
     width: 60%;
@@ -16,6 +19,9 @@ const DescPerso = styled.p`
     @media screen and (max-width: ${size.mobileM}) {
         font-size:0.8em;
     }
+    @media screen and (min-width: ${size.desktopMax}) {
+        width: 50%;
+    } 
 `
 
 function Apropos() {

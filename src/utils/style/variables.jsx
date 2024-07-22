@@ -12,7 +12,7 @@ export const backgroundStandard = `
     margin-top: 30px; 
 `
 export const contourShadow = `   
-    border: 2px white solid;
+    border: 2px solid;
     border-radius: 5px;
     box-shadow: 3px 2px 10px grey ;
 `
