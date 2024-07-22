@@ -4,6 +4,7 @@ import colors from '../../utils/style/colors';
 import { size } from '../../utils/style/device';
 import { flexCenter } from '../../utils/style/variables';
 import navButton from '../../assets/icons/navButton.svg'
+import { useState } from 'react';
 
 const StyledHeader = styled.header`
     position: fixed;
@@ -52,47 +53,75 @@ const NavLink = styled.a`
     }
 `
 const NSBox = styled.div`
-    // display:none;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 75px;
-    padding: 10px 20px;
-    background-color: ${colors.backgroundDark};
-    border-bottom-right-radius: 10px;
+    display: none;    
+    @media screen and (max-width: ${size.tablet}) {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 75px;
+        right: 0px;
+        padding: 10px 20px;
+        background-color: ${colors.backgroundDark};
+        border-bottom-left-radius: 10px;
+    }  
+    
 `
 const NavLinkS = styled.a`
     color: white;
     font-weight: bold;
     text-decoration: none;
-    margin-top: 10px;
+    margin: 10px;
 `
 
 function Navbar() {
-    return (
-        <StyledHeader>
-            <LogoImg id="logo" src={Logo} alt="" />
-            <NavLarge>
-                <NavLink href="#Accueil">Accueil</NavLink>
-                <NavLink href="#APropos">À Propos</NavLink>
-                <NavLink href="#Competences">Compétences</NavLink>
-                <NavLink href="#Formations">Formations</NavLink>
-                <NavLink href="#Portfolio">Portfolio</NavLink>
-                <NavLink href="#Contact">Contact</NavLink>
-            </NavLarge>
-            <NavSmall>
-                <ButtonNav src={navButton} alt="" onClick="" />
-            </NavSmall>
-            <NSBox id="navLinks">
-                <NavLinkS href="#Accueil">Accueil</NavLinkS>
-                <NavLinkS href="#APropos">À Propos</NavLinkS>
-                <NavLinkS href="#Competences">Compétences</NavLinkS>
-                <NavLinkS href="#Formations">Formations</NavLinkS>
-                <NavLinkS href="#Portfolio">Portfolio</NavLinkS>
-                <NavLinkS href="#Contact">Contact</NavLinkS>
-            </NSBox>
-        </StyledHeader>
-    )
+    const [displayNavBar, changeDisplayNavBar] = useState("false");
+
+    if (displayNavBar) {
+        return (
+            <StyledHeader>
+                <LogoImg id="logo" src={Logo} alt="" />
+                <NavLarge>
+                    <NavLink href="#Accueil">Accueil</NavLink>
+                    <NavLink href="#APropos">À Propos</NavLink>
+                    <NavLink href="#Competences">Compétences</NavLink>
+                    <NavLink href="#Formations">Formations</NavLink>
+                    <NavLink href="#Portfolio">Portfolio</NavLink>
+                    <NavLink href="#Contact">Contact</NavLink>
+                </NavLarge>
+                <NavSmall>
+                    <ButtonNav src={navButton} alt="" onClick={(e) => changeDisplayNavBar(!displayNavBar)} />
+                </NavSmall>
+            </StyledHeader>
+        )
+    }
+    else {
+        return (
+            <StyledHeader>
+                <LogoImg id="logo" src={Logo} alt="" />
+                <NavLarge>
+                    <NavLink href="#Accueil">Accueil</NavLink>
+                    <NavLink href="#APropos">À Propos</NavLink>
+                    <NavLink href="#Competences">Compétences</NavLink>
+                    <NavLink href="#Formations">Formations</NavLink>
+                    <NavLink href="#Portfolio">Portfolio</NavLink>
+                    <NavLink href="#Contact">Contact</NavLink>
+                </NavLarge>
+                <NavSmall>
+                    <ButtonNav src={navButton} alt="" onClick={(e) => changeDisplayNavBar(!displayNavBar)} />
+                </NavSmall>
+                <NSBox id="navLinks">
+                    <NavLinkS href="#Accueil">Accueil</NavLinkS>
+                    <NavLinkS href="#APropos">À Propos</NavLinkS>
+                    <NavLinkS href="#Competences">Compétences</NavLinkS>
+                    <NavLinkS href="#Formations">Formations</NavLinkS>
+                    <NavLinkS href="#Portfolio">Portfolio</NavLinkS>
+                    <NavLinkS href="#Contact">Contact</NavLinkS>
+                </NSBox>
+            </StyledHeader>
+        )
+    }
+
+
 }
 
 export default Navbar
