@@ -2,21 +2,9 @@ import styled from "styled-components"
 import { backgroundStandard, contourShadow, flexCenter } from "../../utils/style/variables"
 import colors from "../../utils/style/colors"
 import { motion } from "framer-motion"
-
-import logoHtml from "../../assets/logos/logoHTML.webp"
-import logoCss from "../../assets/logos/logoCSS.webp"
-import logoScss from "../../assets/logos/logoSASS.webp"
-import logoJS from "../../assets/logos/logoJS.webp"
-import logoReact from "../../assets/logos/logoREACT.webp"
-import logoRedux from "../../assets/logos/logoREDUX.webp"
-import logoGit from "../../assets/logos/logoGit.webp"
-import logoVS from "../../assets/logos/logoVScode.webp"
-import logoPost from "../../assets/logos/logoPostman.webp"
-import logoNode from "../../assets/logos/logoNodeJS.webp"
-import logoPhp from "../../assets/logos/logoPHP.webp"
-import logoSQL from "../../assets/logos/logoMySQL.webp"
-import logoSEO from "../../assets/logos/logoSEO.webp"
 import { size } from "../../utils/style/device"
+import React, { Component } from "react"
+import competanceList from "../../data/competances.json"
 
 
 const Comp = styled.div`
@@ -60,75 +48,71 @@ const CompList = styled.div`
     }
 `
 
-function Competences() {
-    return (
-        <Comp id="Competences">
-            <h2>Compétences</h2>
-            <CompBox>
-                <h3>Maitrisées:</h3>
-                <CompRow>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
-                        <img src={logoHtml} alt="" />
-                        <p> HTML</p>
-                    </CompList>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
-                        <img src={logoCss} alt="" />
-                        <p> CSS</p>
-                    </CompList>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
-                        <img src={logoScss} alt="" />
-                        <p> SCSS</p>
-                    </CompList>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
-                        <img src={logoJS} alt="" />
-                        <p> Javascript</p>
-                    </CompList>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
-                        <img src={logoReact} alt="" />
-                        <p> React</p>
-                    </CompList>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
-                        <img src={logoRedux} alt="" />
-                        <p>Redux</p>
-                    </CompList>
-                </CompRow>
-                <h3>Outils:</h3>
-                <CompRow>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1}}>
-                        <img src={logoGit} alt="" />
-                        <p>Git</p>
-                    </CompList>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1}}>
-                        <img src={logoVS} alt="" />
-                        <p>VScode</p>
-                    </CompList>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1}}>
-                        <img src={logoPost} alt="" />
-                        <p>Postman</p>
-                    </CompList>
-                </CompRow>
-                <h3>Notions:</h3>
-                <CompRow>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
-                        <img src={logoNode} alt="" />
-                        <p>NodeJS</p>
-                    </CompList>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
-                        <img src={logoPhp} alt="" />
-                        <p>Php</p>
-                    </CompList>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
-                        <img src={logoSQL} alt="" />
-                        <p>MySQL</p>
-                    </CompList>
-                    <CompList as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
-                        <img src={logoSEO} alt="" />
-                        <p>SEO</p>
-                    </CompList>
-                </CompRow>
-            </CompBox>
-        </Comp>
-    )
-}
+class CompetancesCards extends Component {
+    constructor() {
+        super();
+        this.state = {
+            competanceList: []
+        }
+    }
+    componentDidMount() {
+        let maitrise = competanceList.maitrise.map((maitrise, key) => {
+            return (
+                <CompList 
+                key={maitrise.id}
+                as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
+                    <img src={process.env.PUBLIC_URL + `/assets/logos/` + maitrise.url} alt="" />
+                    <p> {maitrise.name} </p>
+                </CompList>
+            )
+        })
+        this.setState({maitrise: maitrise});
 
-export default Competences
+        let outils = competanceList.outils.map((outils, key) => {
+            return (
+                <CompList 
+                key={outils.id}
+                as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
+                    <img src={process.env.PUBLIC_URL + `/assets/logos/` + outils.url} alt="" />
+                    <p> {outils.name} </p>
+                </CompList>
+            )
+        })
+        this.setState({outils: outils});
+
+        let notions = competanceList.notions.map((notions, key) => {
+            return (
+                <CompList 
+                key={notions.id}
+                as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
+                    <img src={process.env.PUBLIC_URL + `/assets/logos/` + notions.url} alt="" />
+                    <p> {notions.name} </p>
+                </CompList>
+            )
+        })
+        this.setState({notions: notions});
+    }
+
+    render() {
+        return (
+            <Comp id="Competences">
+             <h2>Compétences</h2>
+             <CompBox>
+                 <h3>Maitrisées:</h3>
+                 <CompRow>
+                    {this.state.maitrise}
+                 </CompRow>
+                 <h3>Outils:</h3>
+                 <CompRow>
+                    {this.state.outils}
+                 </CompRow>
+                 <h3>Notions:</h3>
+                 <CompRow>
+                    {this.state.notions}
+                 </CompRow>
+             </CompBox>
+         </Comp>
+        )
+    }
+}
+export default CompetancesCards;

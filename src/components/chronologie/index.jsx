@@ -3,7 +3,8 @@ import { backgroundStandard, contourShadow, flexCenter } from "../../utils/style
 import colors from "../../utils/style/colors"
 import { size } from "../../utils/style/device"
 import { motion } from "framer-motion"
-// import formationList from "../../data/formation.json"
+import formationList from "../../data/formation.json"
+import React, { Component } from "react"
 
 const FormationBox = styled.div`
     ${flexCenter}
@@ -15,8 +16,7 @@ const FormationBox = styled.div`
 const FormationCardList = styled.div`
     ${flexCenter}
 `
-const FormationCard = styled.div`
-    
+const FormationCard = styled.div`    
     background-color: ${colors.primary};
     width: 80%;
     height: 80px;
@@ -30,20 +30,36 @@ const FormationCard = styled.div`
         width: 500px;
     }
 `
+class FormationCards extends Component {
+    constructor() {
+        super();
+        this.state = {
+            formationList: []
+        }
+    }
+    componentDidMount() {
+        let formations = formationList.formations.map((formations, key) => {
+            return (
+                <FormationCard
+                    key={formations.id}
+                    as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}
+                >
+                    {formations.date}: {formations.description} - {formations.where}
+                </FormationCard>
+            )
+        })
+        this.setState({formations: formations});
+    }
 
-
-function Chrono(){
-    return (
-        <FormationBox id="Formations">
-            <h2>Formation</h2> 
+    render() {
+        return (
+            <FormationBox id="Formations">
+                <h2>Formation</h2>
                 <FormationCardList>
-                    <FormationCard as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>2012: Baccalauréat Science - Privas</FormationCard>
-                    <FormationCard as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>2018: Formation développeur web - Simplon Pau</FormationCard>
-                    <FormationCard as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>2023-2024: Formation Intégrateur Web - OpenClassrooms</FormationCard>
-                    <FormationCard as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>2024: Titre professionel «Développeur Intégrateur Web» - OpenClassroom</FormationCard>
+                    {this.state.formations}
                 </FormationCardList>
-        </FormationBox>
-    )
+            </FormationBox>
+        )
+    }
 }
-
-export default Chrono
+export default FormationCards;

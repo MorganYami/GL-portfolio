@@ -1,10 +1,8 @@
 import styled from "styled-components"
 import { backgroundStandard, contourShadow, flexCenter } from "../../utils/style/variables"
-// import ProjetKasa from "../../assets/background/Kasa_Screen.png"
-// import ProjetBank from "../../assets/background/ArgnetBank_Screen.png"
-// import tempProjectImg from "../../assets/background/pexels-pixabay-247791.jpg"
 import { size } from "../../utils/style/device"
 import colors from "../../utils/style/colors"
+import { motion } from "framer-motion"
 
 const PortfolioBox = styled.div`
     ${flexCenter}
@@ -37,6 +35,9 @@ const Project = styled.div`
         width: 90%;
         margin: 25px 0px 50px 0px;
     }
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 function Projets() {
@@ -47,9 +48,11 @@ function Projets() {
         <PortfolioBox id="Portfolio">
             <h2>Quelques Réalisations</h2>
             <ProjectBox>
-                <Project id="kasa" onClick={() => openProject("https://plainenglish.io")}>
+                <Project id="kasa" className="tooltip" onClick={() => openProject("https://plainenglish.io")} as={motion.div} whileHover={{ scale: 1.2 }}>
+                    <span className="tooltiptext">Kasa: un projet React</span>
                 </Project>
-                <Project id="bank" onClick={() => openProject("https://plainenglish.io")}>
+                <Project id="bank" className="tooltip" onClick={() => openProject("https://plainenglish.io")} as={motion.div} whileHover={{ scale: 1.2 }}>
+                    <span className="tooltiptext">ArgentBank: un projet Redux</span>
                 </Project>
             </ProjectBox>
         </PortfolioBox>

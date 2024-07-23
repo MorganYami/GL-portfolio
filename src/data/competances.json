@@ -1,0 +1,73 @@
+{
+    "maitrise": [
+        {
+            "id": 0,
+            "url": "logoHTML.webp",
+            "name" : "HTML"
+        },
+        {
+            "id": 1,
+            "url": "../../assets/logos/logoCSS.webp",
+            "name" : "CSS"
+        },
+        {
+            "id": 2,
+            "url": "../../assets/logos/logoSASS.webp",
+            "name" : "SCSS"
+        },
+        {
+            "id": 3,
+            "url": "../../assets/logos/logoJS.webp",
+            "name" : "Javascript"
+        },
+        {
+            "id": 4,
+            "url": "../../assets/logos/logoREACT.webp",
+            "name" : "React"
+        },
+        {
+            "id": 5,
+            "url": "../../assets/logos/logoREDUX.webp",
+            "name" : "Redux"
+        }
+    ],
+    "outils" : [
+        {
+            "id": 10,
+            "url": "../../assets/logos/logoGit.webp",
+            "name" : "Git"
+        },
+        {
+            "id": 11,
+            "url": "../../assets/logos/logoVSCode.webp",
+            "name" : "VScode"
+        },
+        {
+            "id": 12,
+            "url": "../../assets/logos/logoPostman.webp",
+            "name" : "Postman"
+        }
+    ],
+    "notions" : [
+        {
+            "id": 20,
+            "url": "../../assets/logos/logoNodeJS.webp",
+            "name" : "NodeJS"
+        },
+        {
+            "id": 21,
+            "url": "../../assets/logos/logoPHP.webp",
+            "name" : "Php"
+        },
+        {
+            "id": 22,
+            "url": "../../assets/logos/logoMySQL.webp",
+            "name" : "MySQL"
+        },
+        {
+            "id": 23,
+            "url": "../../assets/logos/logoSEO.webp",
+            "name" : "SEO"
+        }
+    ]
+}
