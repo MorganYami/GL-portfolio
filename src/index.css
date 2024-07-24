@@ -12,12 +12,12 @@ code {
 }
 
 #kasa {      
-  background: no-repeat center url(../src/assets/background/Kasa_Screen.png);
+  background: no-repeat center url(../src/assets/background/Kasa_Screen.webp);
   background-size: cover;
   background-position: top left ;
 }
 #bank {      
-  background: no-repeat center url(../src/assets/background/ArgnetBank_Screen.png);
+  background: no-repeat center url(../src/assets/background/ArgnetBank_Screen.webp);
   background-size: cover;
   background-position: top left ;
 }

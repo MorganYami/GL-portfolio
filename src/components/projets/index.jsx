@@ -48,10 +48,10 @@ function Projets() {
         <PortfolioBox id="Portfolio">
             <h2>Quelques Réalisations</h2>
             <ProjectBox>
-                <Project id="kasa" className="tooltip" onClick={() => openProject("https://plainenglish.io")} as={motion.div} whileHover={{ scale: 1.2 }}>
+                <Project id="kasa" className="tooltip" onClick={() => openProject("https://github.com/MorganYami/projet8_kasa")} as={motion.div} whileHover={{ scale: 1.2 }}>
                     <span className="tooltiptext">Kasa: un projet React</span>
                 </Project>
-                <Project id="bank" className="tooltip" onClick={() => openProject("https://plainenglish.io")} as={motion.div} whileHover={{ scale: 1.2 }}>
+                <Project id="bank" className="tooltip" onClick={() => openProject("https://github.com/MorganYami/ArgentBank-website")} as={motion.div} whileHover={{ scale: 1.2 }}>
                     <span className="tooltiptext">ArgentBank: un projet Redux</span>
                 </Project>
             </ProjectBox>

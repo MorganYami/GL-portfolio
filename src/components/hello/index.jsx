@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import accueilImage from '../../assets/background/codescreen01.jpg'
+import accueilImage from '../../assets/background/codescreen02.webp'
 import colors from "../../utils/style/colors"
 import { flexCenter } from "../../utils/style/variables"
 import { size } from "../../utils/style/device"

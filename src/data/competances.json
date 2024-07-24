@@ -7,66 +7,66 @@
         },
         {
             "id": 1,
-            "url": "../../assets/logos/logoCSS.webp",
+            "url": "logoCSS.webp",
             "name" : "CSS"
         },
         {
             "id": 2,
-            "url": "../../assets/logos/logoSASS.webp",
+            "url": "logoSASS.webp",
             "name" : "SCSS"
         },
         {
             "id": 3,
-            "url": "../../assets/logos/logoJS.webp",
+            "url": "logoJS.webp",
             "name" : "Javascript"
         },
         {
             "id": 4,
-            "url": "../../assets/logos/logoREACT.webp",
+            "url": "logoREACT.webp",
             "name" : "React"
         },
         {
             "id": 5,
-            "url": "../../assets/logos/logoREDUX.webp",
+            "url": "logoREDUX.webp",
             "name" : "Redux"
         }
     ],
     "outils" : [
         {
             "id": 10,
-            "url": "../../assets/logos/logoGit.webp",
+            "url": "logoGit.webp",
             "name" : "Git"
         },
         {
             "id": 11,
-            "url": "../../assets/logos/logoVSCode.webp",
+            "url": "logoVSCode.webp",
             "name" : "VScode"
         },
         {
             "id": 12,
-            "url": "../../assets/logos/logoPostman.webp",
+            "url": "logoPostman.webp",
             "name" : "Postman"
         }
     ],
     "notions" : [
         {
             "id": 20,
-            "url": "../../assets/logos/logoNodeJS.webp",
+            "url": "logoNodeJS.webp",
             "name" : "NodeJS"
         },
         {
             "id": 21,
-            "url": "../../assets/logos/logoPHP.webp",
+            "url": "logoPHP.webp",
             "name" : "Php"
         },
         {
             "id": 22,
-            "url": "../../assets/logos/logoMySQL.webp",
+            "url": "logoMySQL.webp",
             "name" : "MySQL"
         },
         {
             "id": 23,
-            "url": "../../assets/logos/logoSEO.webp",
+            "url": "logoSEO.webp",
             "name" : "SEO"
         }
     ]
