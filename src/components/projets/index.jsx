@@ -52,7 +52,7 @@ function Projets() {
                     <span className="tooltiptext">Kasa: un projet React</span>
                 </Project>
                 <Project id="bank" className="tooltip" onClick={() => openProject("https://github.com/MorganYami/ArgentBank-website")} as={motion.div} whileHover={{ scale: 1.2 }}>
-                    <span className="tooltiptext">ArgentBank: un projet Redux</span>
+                    <span className="tooltiptext">ArgentBank: un projet Redux (code source)</span>
                 </Project>
             </ProjectBox>
         </PortfolioBox>
