@@ -32,7 +32,7 @@ function Apropos() {
                 Je suis un jeune développeur web à la recherche de nouvelles expériences. <br /><br />
                 Friant de jeux vidéo de longue date, j'ai acquis un interet particulier pour le développement web.<br />
                 Je dispose, depuis 2024, d'un titre professionel de « Développeur Intégrateur Web », obtenu à la suite d'une formation avec OpenClassrooms. <br />
-                
+                Je suis capable, entre autres, d'intégrer des maquettes de sites static ou dynamique avec Javascript, d'écrire des composants React, de gérer des States avec Redux et de communiquer avec une Api.
             </DescPerso>
         </ProposBox>
     )

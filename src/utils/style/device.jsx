@@ -9,5 +9,3 @@ export const size = {
     desktop: '2560px',
     desktopMax: '3840px'
 }
-
-// desktop L et Mobile L: style specifique?

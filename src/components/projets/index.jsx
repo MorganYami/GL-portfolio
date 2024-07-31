@@ -2,7 +2,12 @@ import styled from "styled-components"
 import { backgroundStandard, contourShadow, flexCenter } from "../../utils/style/variables"
 import { size } from "../../utils/style/device"
 import colors from "../../utils/style/colors"
-import { motion } from "framer-motion"
+import kasaScreen from "../../assets/background/Kasa_Screen.webp"
+import argentBankScreen from "../../assets/background/ArgnetBank_Screen.webp"
+import logoCSS from "../../assets/logos/logoCSS.webp"
+import logoSCSS from "../../assets/logos/logoSASS.webp"
+import logoReact from "../../assets/logos/logoREACT.webp"
+import logoRedux from "../../assets/logos/logoREDUX.webp"
 
 const PortfolioBox = styled.div`
     ${flexCenter}
@@ -23,20 +28,41 @@ const ProjectBox = styled.div`
         justify-content: center;
     }
 `
-const Project = styled.div`  
+const Project = styled.div` 
+    display: flex; 
+    flex-direction: column;
     width: 400px;
-    height: 200px;
-    color: white;
-    text-align: center;
-    align-content: center;
     ${contourShadow}    
     border-color: ${colors.backgroundDarker};
+    background-color: white;
+    img {
+        width: 100%;
+        border-bottom: solid black 2px;
+    }
+    p {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 5px 10px;
+        img {
+            width: 25px;
+            border: none;
+            margin: 0 5px;
+        }
+    }
+    .ProjectLink {
+        text-decoration: none;
+        color: ${colors.backgroundDarker};
+        font-weight: bold;
+        &:hover {
+            color: ${colors.secondary};
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
     @media screen and (max-width: ${size.tablet}) {
         width: 90%;
         margin: 25px 0px 50px 0px;
-    }
-    &:hover {
-        cursor: pointer;
     }
 `
 
@@ -48,11 +74,18 @@ function Projets() {
         <PortfolioBox id="Portfolio">
             <h2>Quelques Réalisations</h2>
             <ProjectBox>
-                <Project id="kasa" className="tooltip" onClick={() => openProject("https://kasagl07.netlify.app/")} as={motion.div} whileHover={{ scale: 1.2 }}>
-                    <span className="tooltiptext">Kasa: un projet React</span>
+                <Project>
+                    <img src={kasaScreen} alt="Un screenshot du site Kasa"/>
+                    <p>Kasa est un projet de site de location d'appartement</p>
+                    <p>Tech: <img src={logoCSS} alt="css"/> + <img src={logoReact} alt="react"/></p>
+                    <p className="ProjectLink" onClick={() => openProject("https://kasagl07.netlify.app/")}>Voir le site</p> 
+                    <p className="ProjectLink" onClick={() => openProject("https://github.com/MorganYami/projet8_kasa")}>Voir le code source</p>
                 </Project>
-                <Project id="bank" className="tooltip" onClick={() => openProject("https://github.com/MorganYami/ArgentBank-website")} as={motion.div} whileHover={{ scale: 1.2 }}>
-                    <span className="tooltiptext">ArgentBank: un projet Redux (code source)</span>
+                <Project>
+                    <img src={argentBankScreen} alt="Un screenshot du site Kasa"/>
+                    <p>Argent Bank est un projet de site de consultation de compte en banque</p>
+                    <p>Tech: <img src={logoSCSS} alt="scss"/> + <img src={logoReact} alt="react"/>+ <img src={logoRedux} alt="redux"/></p>
+                    <p className="ProjectLink" onClick={() => openProject("https://github.com/MorganYami/ArgentBank-website")}>Voir le code source</p>
                 </Project>
             </ProjectBox>
         </PortfolioBox>

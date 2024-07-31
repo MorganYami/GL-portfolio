@@ -69,5 +69,34 @@
             "url": "logoSEO.webp",
             "name" : "SEO"
         }
+    ],
+    "competances" : [
+        {
+            "id": 30,
+            "name": "Site web Static"
+        },{
+            "id": 31,
+            "name": "Site web dynamique"
+        },
+        {
+            "id": 32,
+            "name": "Single page application"
+        },
+        {
+            "id": 33,
+            "name": "Rooting avec React"
+        },
+        {
+            "id": 34,
+            "name": "Communication avec une API"
+        },
+        {
+            "id": 35,
+            "name": "Creation d'un Store React"
+        },
+        {
+            "id": 36,
+            "name": "Gestion de State avec Redux"
+        }
     ]
 }

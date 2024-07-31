@@ -46,6 +46,9 @@ const CompList = styled.div`
     p {
         margin-left: 15px
     }
+    .compDetail{
+        margin-left: 0px;
+    }
 `
 
 class CompetancesCards extends Component {
@@ -91,6 +94,18 @@ class CompetancesCards extends Component {
             )
         })
         this.setState({notions: notions});
+
+        
+        let competances = competanceList.competances.map((competances, key) => {
+            return (
+                <CompList 
+                key={competances.id}
+                as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 1 }}>
+                    <p className="compDetail"> {competances.name} </p>
+                </CompList>
+            )
+        })
+        this.setState({competances: competances});
     }
 
     render() {
@@ -109,6 +124,10 @@ class CompetancesCards extends Component {
                  <h3>Notions:</h3>
                  <CompRow>
                     {this.state.notions}
+                 </CompRow>
+                 <h3>Savoir faire pratique:</h3>
+                 <CompRow>
+                    {this.state.competances}
                  </CompRow>
              </CompBox>
          </Comp>
