@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/GL-portfolio/static/css/main.2c9e76a0.css",
-    "main.js": "/GL-portfolio/static/js/main.bce5160e.js",
+    "main.css": "/GL-portfolio/static/css/main.6528434d.css",
+    "main.js": "/GL-portfolio/static/js/main.cfd6a5c4.js",
     "static/media/codescreen02.webp": "/GL-portfolio/static/media/codescreen02.a648a21182148520cbfb.webp",
     "static/media/Kasa_Screen.webp": "/GL-portfolio/static/media/Kasa_Screen.e97454cefa0ff3d575a6.webp",
     "static/media/ArgnetBank_Screen.webp": "/GL-portfolio/static/media/ArgnetBank_Screen.a97d7a35e5a639c55b27.webp",
     "static/media/logoEmail.webp": "/GL-portfolio/static/media/logoEmail.9dee8681063faaca1591.webp",
     "static/media/logoGithub.webp": "/GL-portfolio/static/media/logoGithub.bcb0a61466a6ceb6b2ae.webp",
     "static/media/logoPortfolio_small.webp": "/GL-portfolio/static/media/logoPortfolio_small.4f3edd581f6c915ab6ee.webp",
+    "static/media/logoREACT.webp": "/GL-portfolio/static/media/logoREACT.d7e73a9f13dbea39e37b.webp",
+    "static/media/logoCSS.webp": "/GL-portfolio/static/media/logoCSS.f1826e861b87d6b0ab4b.webp",
+    "static/media/logoREDUX.webp": "/GL-portfolio/static/media/logoREDUX.448a880a4bf660cd2340.webp",
+    "static/media/logoSASS.webp": "/GL-portfolio/static/media/logoSASS.605ed21cf7e6187859df.webp",
     "static/media/logoLinkedIn.webp": "/GL-portfolio/static/media/logoLinkedIn.15bfc320855978a83469.webp",
     "index.html": "/GL-portfolio/index.html",
     "static/media/navButton.svg": "/GL-portfolio/static/media/navButton.0ddc91a14bddb6d2073b59332f99efda.svg",
-    "main.2c9e76a0.css.map": "/GL-portfolio/static/css/main.2c9e76a0.css.map",
-    "main.bce5160e.js.map": "/GL-portfolio/static/js/main.bce5160e.js.map"
+    "main.6528434d.css.map": "/GL-portfolio/static/css/main.6528434d.css.map",
+    "main.cfd6a5c4.js.map": "/GL-portfolio/static/js/main.cfd6a5c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c9e76a0.css",
-    "static/js/main.bce5160e.js"
+    "static/css/main.6528434d.css",
+    "static/js/main.cfd6a5c4.js"
   ]
 }
